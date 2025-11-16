@@ -5,7 +5,7 @@
   <title>SHATRAMAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Police futuriste (Audiowide) -->
+  <!-- Police futuriste -->
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
 
   <style>
@@ -33,6 +33,7 @@
       color: white;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow: hidden;
+      padding: 1rem;
     }
 
     .scanlines {
@@ -50,9 +51,22 @@
 
     .container {
       text-align: center;
-      padding: 2rem;
       position: relative;
       z-index: 1;
+    }
+
+    /* Le GIF */
+    .gif-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .gif-wrapper img {
+      width: 180px;        /* Ajuste ici la taille */
+      max-width: 80vw;
+      border-radius: 12px;
+      box-shadow:
+        0 0 12px rgba(127, 255, 148, 0.4),
+        0 0 20px rgba(155, 91, 255, 0.4);
     }
 
     .name {
@@ -137,6 +151,12 @@
   <div class="scanlines"></div>
 
   <div class="container">
+
+    <!-- Ajoute ton GIF ici -->
+    <div class="gif-wrapper">
+      <img src="pixil-gif-drawing.gif" alt="Cyberpunk GIF">
+    </div>
+
     <div class="name">SHATRAMAI</div>
     <div class="subtitle">Portfolio • Dev & Game</div>
     <div class="line"></div>
