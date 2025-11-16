@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHATRAMAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Police futuriste (Audiowide) -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --eva-green: #7fff94;
+      --eva-purple: #9b5bff;
+      --bg-dark: #050509;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(127, 255, 148, 0.15) 0, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(155, 91, 255, 0.18) 0, transparent 55%),
+        linear-gradient(135deg, #020308 0%, #050509 40%, #010006 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      );
+      background-size: 100% 2px;
+      mix-blend-mode: soft-light;
+      opacity: 0.25;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .name {
+      font-family: "Audiowide", system-ui, sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      background: linear-gradient(
+        120deg,
+        var(--eva-green),
+        var(--eva-purple),
+        var(--eva-green)
+      );
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation:
+        glow 2.5s ease-in-out infinite alternate,
+        gradientShift 8s linear infinite;
+      text-shadow:
+        0 0 12px rgba(127, 255, 148, 0.5),
+        0 0 24px rgba(155, 91, 255, 0.4);
+    }
+
+    .subtitle {
+      font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(220, 220, 220, 0.8);
+      margin-bottom: 2.2rem;
+    }
+
+    .line {
+      width: 220px;
+      height: 1px;
+      margin: 0 auto;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--eva-green),
+        var(--eva-purple),
+        transparent
+      );
+      box-shadow:
+        0 0 8px rgba(127, 255, 148, 0.7),
+        0 0 12px rgba(155, 91, 255, 0.6);
+    }
+
+    .tagline {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(200, 200, 200, 0.7);
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 6px rgba(127, 255, 148, 0.4),
+          0 0 14px rgba(155, 91, 255, 0.3);
+        opacity: 0.85;
+      }
+      to {
+        text-shadow:
+          0 0 12px rgba(127, 255, 148, 0.9),
+          0 0 28px rgba(155, 91, 255, 0.9);
+        opacity: 1;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <div class="container">
+    <div class="name">SHATRAMAI</div>
+    <div class="subtitle">Portfolio • Dev & Game</div>
+    <div class="line"></div>
+    <div class="tagline">
+      Cyberpunk vibes • Green & Purple EVA
+    </div>
+  </div>
+</body>
+</html>
+
